@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import styles from '../css/Button.module.css';
-import font from '../css/font-color.module.css';
+import fontColor from '../css/font-color.module.css';
 import background from '../css/background.module.css';
 
 const propTypes = {
@@ -11,6 +11,8 @@ const propTypes = {
   size: PropTypes.oneOf(['sm', 'md', 'lg', null]),
 
   href: PropTypes.string,
+
+  disabled: PropTypes.bool,
 
   type: PropTypes.oneOf(['button', 'reset', 'submit', null]),
 
@@ -23,7 +25,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  variant: 'primary',
   size: 'md',
   disabled: false,
   type: 'button',
@@ -40,9 +41,9 @@ const Button = React.forwardRef(
       className,
       styles[size],
       background[colorButton],
-      font[colorText]
+      fontColor[colorText]
     );
-
+    console.log(props);
     if(props.href)
     {
       as = 'a';
