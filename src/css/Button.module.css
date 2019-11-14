@@ -1,0 +1,15 @@
+.error {
+  background-color: red;
+}
+
+.lg{
+  width: 300px;
+}
+
+.md{
+  width: 150px;
+}
+
+.sm{
+  width: 75px;
+}
