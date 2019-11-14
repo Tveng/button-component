@@ -43,7 +43,7 @@ const Button = React.forwardRef(
       background[colorButton],
       fontColor[colorText]
     );
-    console.log(props);
+
     if(props.href)
     {
       as = 'a';
